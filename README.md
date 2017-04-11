@@ -14,6 +14,6 @@ Index of articles
 -----------------
 
      ID                                Title						           URL 
----------|-------------------------------------------------------------------------------|-------------------------------------------------------------------------------------
-BN-00001 |Get Started with Serverless Computing on Kubernetes with Minikube and Kubeless |https://docs.bitnami.com/kubernetes/how-to/get-started-serverless-computing-kubeless/
+|---------|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+|BN-00001 |Get Started with Serverless Computing on Kubernetes with Minikube and Kubeless |https://docs.bitnami.com/kubernetes/how-to/get-started-serverless-computing-kubeless/ |
 
