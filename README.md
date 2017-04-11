@@ -13,7 +13,7 @@ Each tutorial is identified by and ID (example: BN-00001) in order to don't  mes
 Index of articles
 -----------------
 
-     ID                                Title						           URL 
+|    ID   |                            Title						  |        URL                                                                           |
 |---------|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
 |BN-00001 |Get Started with Serverless Computing on Kubernetes with Minikube and Kubeless |https://docs.bitnami.com/kubernetes/how-to/get-started-serverless-computing-kubeless/ |
 
