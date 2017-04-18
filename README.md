@@ -13,8 +13,8 @@ Each tutorial is identified by a keyword in order to don't  messing up with long
 Index of articles
 -----------------
 
-|  Dir    |                            Title						  |        Tutorial URL                                                                  |
-|---------|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-|kubeless |Get Started with Serverless Computing on Kubernetes with Minikube and Kubeless |https://docs.bitnami.com/kubernetes/how-to/get-started-serverless-computing-kubeless/ |
-|buildBase|Build your NodeJs App Docker container from a Bitnami base container           |
+|  Dir       |                            Title						  |        Tutorial URL                                                                  |
+|------------|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+|kubeless    |Get Started with Serverless Computing on Kubernetes with Minikube and Kubeless |https://docs.bitnami.com/kubernetes/how-to/get-started-serverless-computing-kubeless/ |
+|simple-node-app|Build your NodeJs App Docker container from a Bitnami base container           |
 
