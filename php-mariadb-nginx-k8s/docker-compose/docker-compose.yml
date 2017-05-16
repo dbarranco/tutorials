@@ -6,7 +6,7 @@ networks:
 
 services:
   phpfpm:
-    image: mdhont/phpfpm-app:0.1.0
+    image: USERNAME/phpfpm-app:0.1.0
     build: .
     networks:
       - app-tier
