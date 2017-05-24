@@ -6,11 +6,10 @@ networks:
 
 services:
   tomcat:
-    image: 'bitnami/tomcat:latest'
+    image: 'mdhont/java-app:0.1.0'
     ports:
       - '8080:8080'
-    volumes:
-      - /home/bitnami/guides/javak8s/docker/tomcat/sample-app:/bitnami/tomcat/data
+    build: .  
     networks:
       - app-tier
     depends_on:
