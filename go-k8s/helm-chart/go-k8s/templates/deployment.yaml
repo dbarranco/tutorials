@@ -1,0 +1,48 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ template "fullname" . }}
+  labels:
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
+spec:
+  replicas: {{ .Values.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "fullname" . }}
+    spec:
+      containers:
+      - name: {{ .Chart.Name }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        env:
+        - name: MARIADB_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: mariadb-root-password
+              name: {{ template "mariadb.fullname" .  }}
+        - name: MARIADB_USER
+          value: {{ .Values.mariadb.mariadbUser | quote }}
+        - name: MARIADB_HOST
+          value:  {{ template "mariadb.fullname" .  }}
+        - name: MARIADB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: mariadb-password
+              name: {{ template "mariadb.fullname" .  }}
+        - name: MARIADB_DATABASE
+          value: {{ .Values.mariadb.mariadbDatabase | quote }}
+        - name: ALLOW_EMPTY_PASSWORD
+          value: "no"
+        ports:
+        - containerPort: {{ .Values.service.internalPort }}
+        livenessProbe:
+          httpGet:
+            path: /projects
+            port: {{ .Values.service.internalPort }}
+        readinessProbe:
+          httpGet:
+            path: /projects
+            port: {{ .Values.service.internalPort }}
+        resources:
+{{ toYaml .Values.resources | indent 12 }}
