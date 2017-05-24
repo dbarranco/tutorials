@@ -16,8 +16,8 @@ services:
   mariadb:
     image: bitnami/mariadb:latest
     environment:
-        - MARIADB_USER=mariadb
-        - MARIADB_PASSWORD=mariadb
+        - MARIADB_USER=jhipster
+        - MARIADB_PASSWORD=jhipster
         - MARIADB_DATABASE=jhipsterSampleApplication
         - ALLOW_EMPTY_PASSWORD=yes
     networks:
