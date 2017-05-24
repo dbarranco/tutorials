@@ -24,7 +24,7 @@ services:
         - ALLOW_EMPTY_PASSWORD=yes
     healthcheck:
       test: "/opt/bitnami/mariadb/bin/mysql -u jhipster -pjhipster -e 'SHOW DATABASES;'"
-      interval: 30s
-      retries: 1
+      interval: 5s
+      retries: 20
     networks:
       - app-tier
