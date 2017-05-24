@@ -1,4 +1,4 @@
-version: '2'
+version: '2.1'
 
 networks:
   app-tier:
@@ -13,6 +13,9 @@ services:
       - /home/bitnami/guides/javak8s/docker/tomcat/sample-app:/bitnami/tomcat/data
     networks:
       - app-tier
+    depends_on:
+      mariadb:
+        condition: service_healthy
   mariadb:
     image: bitnami/mariadb:latest
     environment:
@@ -20,5 +23,9 @@ services:
         - MARIADB_PASSWORD=jhipster
         - MARIADB_DATABASE=jhipsterSampleApplication
         - ALLOW_EMPTY_PASSWORD=yes
+    healthcheck:
+      test: "/opt/bitnami/mariadb/bin/mysql -u jhipster -pjhipster -e 'SHOW DATABASES;'"
+      interval: 30s
+      retries: 1
     networks:
       - app-tier
