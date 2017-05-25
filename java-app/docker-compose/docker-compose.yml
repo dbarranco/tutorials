@@ -13,9 +13,9 @@ services:
     networks:
       - app-tier
     depends_on:
-      mariadb:
+      jhipster-mariadb:
         condition: service_healthy
-  mariadb:
+  jhipster-mariadb:
     image: bitnami/mariadb:latest
     environment:
         - MARIADB_USER=jhipster
