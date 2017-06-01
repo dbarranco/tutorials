@@ -4,22 +4,15 @@
 replicaCount: 1
 
 image:
-  repository: bitnami/go-k8s 
-  tag: 0.2.0
+  repository: mdhont/go-app 
+  tag: 0.1.0
   pullPolicy: IfNotPresent
 
 service:
-  name: go-k8s
+  name: go-app
   type: NodePort
   externalPort: 3000
   internalPort: 3000
-
-mariadb:
-  mariadbRootPassword: 7trbvdkoA1HHVA==
-  mariadbDatabase: mydb 
-  mariadbUser: myuser 
-  mariadbPassword: GG6cCaV0HbMvOw==
-
 
 resources:
   limits:
