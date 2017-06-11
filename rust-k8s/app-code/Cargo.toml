@@ -1,0 +1,8 @@
+[package]
+name = "http_server"
+version = "0.0.1"
+authors = ["David Barranco <dbarranco@bitnami.com>"]
+
+[dependencies.nickel]
+
+git = "https://github.com/nickel-org/nickel.rs.git"
