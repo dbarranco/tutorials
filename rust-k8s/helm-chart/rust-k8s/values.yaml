@@ -4,7 +4,7 @@
 replicaCount: 1
 
 image:
-  repository: dbarranco/rust-app
+  repository: USERNAME/rust-k8s
   tag: 0.1.0
   pullPolicy: IfNotPresent
 
