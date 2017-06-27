@@ -7,7 +7,7 @@ fn main() {
 
     server.utilize(router! {
         get "**" => |_req, _res| {
-            "Congratulations! Your Rust application has been updated to the latest version and deployed on Kubernetes."
+            "Congratulations! Your Rust application has been deployed on Kubernetes."
         }
     });
 
