@@ -1,5 +1,4 @@
 
-
 #Move the code from the volume
 cp -rf /app-code/* /app
 #Compile the code
