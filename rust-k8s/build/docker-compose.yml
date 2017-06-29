@@ -1,0 +1,14 @@
+version: '2'
+services:
+  rust:
+    build: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - './app-code:/app-code'
+      - './binary:/binary'
+volumes:
+  app-code:
+    driver: local
+  binary:
+    driver: local
