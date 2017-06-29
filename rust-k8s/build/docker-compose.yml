@@ -2,8 +2,6 @@ version: '2'
 services:
   compile:
     build: .
-    ports:
-      - '3000:3000'
     volumes:
       - './app-code:/app-code'
       - './binary:/binary'
